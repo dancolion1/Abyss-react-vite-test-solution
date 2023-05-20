@@ -27,6 +27,8 @@
 import { useState } from 'react';
 import { toTree } from './utils/helper';
 import styles from './App.module.css';
+import Navbar from './components/Navbar/Navbar';
+import Buttons from './components/Buttons/Buttons';
 
 const App = () => {
 	const [states, setStates] = useState<{ value: string; tree: TreeChildType }>({
@@ -100,38 +102,45 @@ const App = () => {
 					key={`${node.value}_${index}`}
 					style={{
 						left: `calc(50% - ${node.position[0]}px)`,
-						top: `${node.position[1] - ((node.level) * 7.2)}px`,
+						top: `${node.position[1] - ((node.level) * 8)}px`,
 					}}
 				>
 					<div
 						className={styles.nodeInner}
 						style={{
-							width: `${72 - ((node.level) * 7.2)}px`,
-							height: `${72 - ((node.level) * 7.2)}px`
+							width: `${30 - ((node.level) * 2)}px`,
+							height: `${30 - ((node.level) * 2)}px`,
+							borderRadius:`4px`
 						}}
 					>
 						{node.value}
+						
 					</div>
+					{<Buttons/>}
 				</div>
 			);
 		})
 	}
 
 	return (
+		
 		<div className="wrapper">
+			<Navbar/>
 			<form onSubmit={onSubmit} method='get'>
 				<input
 					type='text'
 					inputMode='text'
 					className={styles.input}
 					value={states.value}
-					onChange={(e) => onChangeInput(e.target.value)}
-					placeholder='Separate words with "Space", ex: oleabhiele daniel'
-				/>
+					onChange={(e) => onChangeInput(e.target.value)}/>
+					<Buttons/>
+
 			</form>
 
 			<div className={styles.tree}>
 				{createDOM(states.tree)}
+				{/* {<Buttons/>} */}
+				
 			</div>
 		</div>
 	);

@@ -1,0 +1,22 @@
+.btn-tag{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+     margin: auto;
+    align-items: center;
+    margin-top: -1.7rem;
+    margin-left: 12rem;
+}
+.btn-tag>button{
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: none;
+    font-size: large;
+    text-align: center;
+   
+}

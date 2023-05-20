@@ -1,0 +1,46 @@
+header{
+    display: flex;
+    margin: auto 2rem;
+    padding: 1rem;
+    justify-content: space-between;
+    align-items: center;
+  
+}
+.logo-sec{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    
+}
+.logo-sec>:nth-child(1){
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
+.logo-sec>:nth-child(2){
+    object-fit: contain;
+    width: 100px;
+    height: 100px; 
+    z-index: -1;
+    margin-left: -1.5rem; 
+}
+.navbar{
+    display: flex;
+    align-items: center;
+   gap: 1rem;
+}
+.navbar>:nth-child(1){
+    padding: 10px 30px;
+    color: white;
+    background-color: blue;
+    border: none;
+}
+/* .navbar-btn{
+    
+    
+} */
+.navbar-btn>button{
+    padding: 0.6rem;
+    border: none;
+    margin-left: 0.5rem;
+    
+}
